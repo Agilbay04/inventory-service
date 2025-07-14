@@ -1,7 +1,7 @@
 using InventoryService.Infrastructure.Filters;
 using RuangDeveloper.AspNetCore.Command;
 
-namespace DotNetService
+namespace InventoryService
 {
     public class Program
     {

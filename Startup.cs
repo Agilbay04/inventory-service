@@ -25,7 +25,7 @@ using InventoryService.Infrastructure.Logging;
 using Microsoft.Extensions.Logging.Console;
 using InventoryService.Infrastructure.Email;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup(IConfiguration configuration)
     {
@@ -143,7 +143,7 @@ namespace DotNetService
             if (IsRedisEnable)
             {
                 services.AddDataProtection()
-                    .SetApplicationName(Configuration["App:Name"] ?? "DotNetService")
+                    .SetApplicationName(Configuration["App:Name"] ?? "InventoryService")
                     .SetDefaultKeyLifetime(TimeSpan.FromDays(60))
                     .PersistKeysToStackExchangeRedis(ConnectionMultiplexer.Connect(redisConnectionString), Configuration["App:DataProtectionKey"]);
 

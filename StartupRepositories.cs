@@ -4,7 +4,7 @@ using InventoryService.Domain.Permission.Repositories;
 using InventoryService.Domain.Role.Repositories;
 using InventoryService.Domain.User.Repositories;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

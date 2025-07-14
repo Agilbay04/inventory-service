@@ -2,7 +2,7 @@ using InventoryService.Infrastructure.BackgroundHosted;
 using InventoryService.Infrastructure.Integrations.Http;
 using InventoryService.Infrastructure.Integrations.NATs;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

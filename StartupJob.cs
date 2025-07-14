@@ -1,6 +1,6 @@
 using InventoryService.Infrastructure.Jobs;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

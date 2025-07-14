@@ -7,7 +7,7 @@ using InventoryService.Domain.Role.Services;
 using InventoryService.Domain.User.Services;
 using InventoryService.Infrastructure.Shareds;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

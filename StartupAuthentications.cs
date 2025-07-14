@@ -1,7 +1,7 @@
 using InventoryService.Domain.Auth.Util;
 using InventoryService.Infrastructure.Databases;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

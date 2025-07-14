@@ -1,6 +1,6 @@
 using InventoryService.Domain.Logging.Listeners;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {

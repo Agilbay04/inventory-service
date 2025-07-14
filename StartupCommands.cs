@@ -1,7 +1,7 @@
 using InventoryService.Commands;
 using RuangDeveloper.AspNetCore.Command;
 
-namespace DotNetService
+namespace InventoryService
 {
     public partial class Startup
     {
