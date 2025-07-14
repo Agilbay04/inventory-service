@@ -7,7 +7,7 @@ namespace InventoryService.Infrastructure.Seeders
 {
     public class RoleSeeder : ISeeder
     {
-        public async Task Seed(DotnetServiceDBContext dbContext, ILogger logger)
+        public async Task Seed(DataContext dbContext, ILogger logger)
         {
             logger.LogInformation("Seeding Roles...");
             var jsonPath = "SeedersData/Role.json";

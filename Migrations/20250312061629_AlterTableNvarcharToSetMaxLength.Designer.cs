@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace InventoryService.Migrations
 {
-    [DbContext(typeof(DotnetServiceDBContext))]
+    [DbContext(typeof(DataContext))]
     [Migration("20250312061629_AlterTableNvarcharToSetMaxLength")]
     partial class AlterTableNvarcharToSetMaxLength
     {

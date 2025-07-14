@@ -6,11 +6,11 @@ using Quartz;
 namespace InventoryService.Infrastructure.Jobs
 {
     public class NotificationHouseKeepingJob(
-        DotnetServiceDBContext context,
+        DataContext context,
         ILoggerFactory loggerFactory
     ) : IJob
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         private readonly ILogger _logger = loggerFactory.CreateLogger(LoggerConstant.ACTIVITY);
 

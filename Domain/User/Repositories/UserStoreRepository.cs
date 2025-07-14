@@ -6,10 +6,10 @@ using DbDeleteConcurrencyException = Microsoft.EntityFrameworkCore.DbUpdateConcu
 namespace InventoryService.Domain.User.Repositories
 {
     public class UserStoreRepository(
-        DotnetServiceDBContext context
+        DataContext context
     )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task Create(Models.User data, List<Guid> roleIds)
         {

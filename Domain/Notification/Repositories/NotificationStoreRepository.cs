@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 namespace InventoryService.Domain.Notification.Repositories
 {
     public class NotificationStoreRepository(
-        DotnetServiceDBContext context
+        DataContext context
         )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task ReadNotificationById(Guid id, Guid userId)
         {

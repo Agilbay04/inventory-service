@@ -24,7 +24,7 @@ namespace InventoryService.Commands
         {
             var fileNames = args.ToList();
             using var scope = _serviceProvider.CreateScope();
-            var dbContext = scope.ServiceProvider.GetRequiredService<DotnetServiceDBContext>();
+            var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
             var logger = scope.ServiceProvider.GetRequiredService<ILogger<SeederCommand>>();
 
             Console.WriteLine("-------------------------- Seed Started -------------------------");

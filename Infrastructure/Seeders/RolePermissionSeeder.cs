@@ -18,7 +18,7 @@ namespace InventoryService.Infrastructure.Seeders
 
   public class RolePermissionSeeder : ISeeder
   {
-    public async Task Seed(DotnetServiceDBContext dbContext, ILogger logger)
+    public async Task Seed(DataContext dbContext, ILogger logger)
     {
       logger.LogInformation("Seeding User Role Permissions...");
       var jsonPath = "SeedersData/RolePermission.json";

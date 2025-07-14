@@ -7,7 +7,7 @@ namespace InventoryService.Infrastructure.Seeders
 {
   public class PermissionSeeder : ISeeder
   {
-    public async Task Seed(DotnetServiceDBContext dbContext, ILogger logger)
+    public async Task Seed(DataContext dbContext, ILogger logger)
     {
       logger.LogInformation("Seeding Permissions...");
       var jsonPath = "SeedersData/Permission.json";

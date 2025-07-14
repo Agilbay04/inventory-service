@@ -4,6 +4,6 @@ namespace InventoryService.Infrastructure.Seeders
 {
   public interface ISeeder
   {
-    Task Seed(DotnetServiceDBContext dbContext, ILogger logger);
+    Task Seed(DataContext dbContext, ILogger logger);
   }
 }

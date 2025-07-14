@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 namespace InventoryService.Domain.Auth.Repositories
 {
     public class AuthQueryRepository(
-        DotnetServiceDBContext context
+        DataContext context
         )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task<Models.User> FindOneById(Guid id)
         {

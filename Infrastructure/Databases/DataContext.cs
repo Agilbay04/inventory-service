@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace InventoryService.Infrastructure.Databases
 {
-    public partial class DotnetServiceDBContext(DbContextOptions<DotnetServiceDBContext> options) : DbContext(options)
+    public partial class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
     {
         public DbSet<Role> Roles { get; set; }
 
@@ -17,6 +17,8 @@ namespace InventoryService.Infrastructure.Databases
         public DbSet<RolePermission> RolePermissions { get; set; }
 
         public DbSet<Notification> Notifications { get; set; }
+
+        public DbSet<Inventory> Inventories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +39,8 @@ namespace InventoryService.Infrastructure.Databases
             SoftDelete<UserRole>(modelBuilder);
             GenerateUuid<RolePermission>(modelBuilder, "Id");
             SoftDelete<RolePermission>(modelBuilder);
+            GenerateUuid<Inventory>(modelBuilder, "Id");
+            SoftDelete<Inventory>(modelBuilder);
 
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)

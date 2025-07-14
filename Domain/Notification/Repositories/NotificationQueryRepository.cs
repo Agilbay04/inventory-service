@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore;
 namespace InventoryService.Domain.Notification.Repositories
 {
     public class NotificationQueryRepository(
-        DotnetServiceDBContext context
+        DataContext context
         )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task<PaginationResult<Models.Notification>> Pagination(NotificationQueryDto queryParams, Guid userId)
         {

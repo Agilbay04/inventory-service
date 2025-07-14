@@ -3,10 +3,10 @@ using InventoryService.Infrastructure.Databases;
 namespace InventoryService.Domain.Auth.Repositories
 {
     public class AuthStoreRepository(
-        DotnetServiceDBContext context
+        DataContext context
         )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task Create(Models.User data)
         {

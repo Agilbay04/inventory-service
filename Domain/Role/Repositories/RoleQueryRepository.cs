@@ -9,10 +9,10 @@ using Microsoft.IdentityModel.Tokens;
 namespace InventoryService.Domain.Role.Repositories
 {
     public class RoleQueryRepository(
-        DotnetServiceDBContext context
+        DataContext context
         )
     {
-        private readonly DotnetServiceDBContext _context = context;
+        private readonly DataContext _context = context;
 
         public async Task<PaginationResult<Models.Role>> Pagination(RoleQueryDto queryParams)
         {

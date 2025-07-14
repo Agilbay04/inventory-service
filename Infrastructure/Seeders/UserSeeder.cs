@@ -8,7 +8,7 @@ namespace InventoryService.Infrastructure.Seeders
 {
   public class UserSeeder : ISeeder
   {
-    public async Task Seed(DotnetServiceDBContext dbContext, ILogger logger)
+    public async Task Seed(DataContext dbContext, ILogger logger)
     {
       logger.LogInformation("Seeding Users...");
       var jsonPath = "SeedersData/User.json";

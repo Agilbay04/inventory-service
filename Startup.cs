@@ -103,7 +103,7 @@ namespace DotNetService
 
             var poolSize = Configuration["ConnectionPoolSize:DefaultConnection1"] != null ? int.Parse(Configuration["ConnectionPoolSize:DefaultConnection1"]) : 50;
 
-            services.AddDbContextPool<DotnetServiceDBContext>(
+            services.AddDbContextPool<DataContext>(
                 options => options.UseSqlServer(Configuration["ConnectionString:DefaultConnection1"] ?? "").UseSnakeCaseNamingConvention(),
                 poolSize
             );
