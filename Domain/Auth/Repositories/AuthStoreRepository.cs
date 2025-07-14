@@ -1,6 +1,6 @@
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Databases;
 
-namespace DotNetService.Domain.Auth.Repositories
+namespace InventoryService.Domain.Auth.Repositories
 {
     public class AuthStoreRepository(
         DotnetServiceDBContext context

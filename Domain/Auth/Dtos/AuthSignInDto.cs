@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using DotNetService.Infrastructure.Regexs;
+using InventoryService.Infrastructure.Regexs;
 
-namespace DotNetService.Domain.Auth.Dtos
+namespace InventoryService.Domain.Auth.Dtos
 {
     public class AuthSignInDto
     {

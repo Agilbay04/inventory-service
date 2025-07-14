@@ -1,7 +1,7 @@
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Exceptions;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace DotNetService.Infrastructure.Filters
+namespace InventoryService.Infrastructure.Filters
 {
     public class ValidatorAttribute : ActionFilterAttribute
     {

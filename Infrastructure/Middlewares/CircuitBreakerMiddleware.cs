@@ -1,10 +1,10 @@
 
-using DotNetService.Immutables;
-using DotNetService.Constants.CircuitBreaker;
+using InventoryService.Immutables;
+using InventoryService.Constants.CircuitBreaker;
 using Microsoft.EntityFrameworkCore;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Exceptions;
 
-namespace DotNetService.Infrastructure.Middlewares
+namespace InventoryService.Infrastructure.Middlewares
 {
 
     public class CircuitBreakerMiddleware

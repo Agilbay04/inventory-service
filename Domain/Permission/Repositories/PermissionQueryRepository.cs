@@ -1,12 +1,12 @@
 using System.Linq.Expressions;
-using DotNetService.Domain.Permission.Dtos;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Infrastructure.Repositories;
+using InventoryService.Domain.Permission.Dtos;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetService.Domain.Permission.Repositories
+namespace InventoryService.Domain.Permission.Repositories
 {
     public class PermissionQueryRepository(
         DotnetServiceDBContext context

@@ -1,6 +1,6 @@
-using DotNetService.Constants.Logger;
+using InventoryService.Constants.Logger;
 
-namespace DotNetService.Infrastructure.BackgroundHosted
+namespace InventoryService.Infrastructure.BackgroundHosted
 {
     public class NATsListener(
         ILoggerFactory loggerFactory,

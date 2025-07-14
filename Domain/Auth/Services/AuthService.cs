@@ -1,14 +1,14 @@
 using BC = BCrypt.Net.BCrypt;
-using DotNetService.Domain.Auth.Util;
-using DotNetService.Domain.Auth.Repositories;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Domain.Permission.Repositories;
-using DotNetService.Domain.Auth.Dtos;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Domain.Auth.Messages;
-using DotNetService.Domain.User.Messages;
+using InventoryService.Domain.Auth.Util;
+using InventoryService.Domain.Auth.Repositories;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Domain.Permission.Repositories;
+using InventoryService.Domain.Auth.Dtos;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Domain.Auth.Messages;
+using InventoryService.Domain.User.Messages;
 
-namespace DotNetService.Domain.Auth.Services
+namespace InventoryService.Domain.Auth.Services
 {
     public class AuthService(
         AuthStoreRepository authStoreRepository,

@@ -1,6 +1,6 @@
 using System.Threading.Channels;
 
-namespace DotNetService.Infrastructure.Queues {
+namespace InventoryService.Infrastructure.Queues {
     public class BackgroundTaskQueue 
     {
         private readonly Channel<Func<CancellationToken, ValueTask>> _queue;

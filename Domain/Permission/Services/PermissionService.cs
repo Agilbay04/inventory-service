@@ -1,10 +1,10 @@
-using DotNetService.Domain.Permission.Repositories;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Domain.Permission.Dtos;
-using DotNetService.Domain.Permission.Messages;
+using InventoryService.Domain.Permission.Repositories;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Domain.Permission.Dtos;
+using InventoryService.Domain.Permission.Messages;
 
-namespace DotNetService.Domain.Permission.Services
+namespace InventoryService.Domain.Permission.Services
 {
     public class PermissionService(
         PermissionStoreRepository permissionStoreRepository,

@@ -1,8 +1,8 @@
-using DotNetService.Infrastructure.Helpers;
+using InventoryService.Infrastructure.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DotNetService.Http.API.Health
+namespace InventoryService.Http.API.Health
 {
     [Route("health")]
     [ApiController]

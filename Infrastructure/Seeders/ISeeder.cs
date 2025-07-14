@@ -1,6 +1,6 @@
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Databases;
 
-namespace DotNetService.Infrastructure.Seeders
+namespace InventoryService.Infrastructure.Seeders
 {
   public interface ISeeder
   {

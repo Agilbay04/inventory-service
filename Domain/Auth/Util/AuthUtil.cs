@@ -3,11 +3,11 @@ using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.Json;
-using DotNetService.Infrastructure.Exceptions;
-using UserModel = DotNetService.Models.User;
-using DotNetService.Domain.Auth.Token;
+using InventoryService.Infrastructure.Exceptions;
+using UserModel = InventoryService.Models.User;
+using InventoryService.Domain.Auth.Token;
 
-namespace DotNetService.Domain.Auth.Util
+namespace InventoryService.Domain.Auth.Util
 {
     public class AuthUtil(
         IConfiguration config

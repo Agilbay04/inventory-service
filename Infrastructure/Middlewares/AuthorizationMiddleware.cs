@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Authorization;
-using DotNetService.Domain.Auth.Util;
-using DotNetService.Infrastructure.Attributes;
-using DotNetService.Infrastructure.Helpers;
+using InventoryService.Domain.Auth.Util;
+using InventoryService.Infrastructure.Attributes;
+using InventoryService.Infrastructure.Helpers;
 using Microsoft.AspNetCore.Authentication;
-using DotNetService.Domain.Auth.Token;
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Domain.Auth.Token;
+using InventoryService.Infrastructure.Databases;
 
-namespace DotNetService.Infrastructure.Middlewares
+namespace InventoryService.Infrastructure.Middlewares
 {
     public class AuthorizationMiddleware(
         RequestDelegate next,

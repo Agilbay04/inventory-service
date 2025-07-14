@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace DotNetService.Infrastructure.Exceptions
+namespace InventoryService.Infrastructure.Exceptions
 {
     public class ValidationException(string message, ModelStateDictionary modelState) : Exception(message)
     {

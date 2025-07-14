@@ -1,7 +1,7 @@
-using DotNetService.Domain.File.Dto;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Domain.File.Dto;
+using InventoryService.Infrastructure.Shareds;
 
-namespace DotNetService.Domain.File.Services
+namespace InventoryService.Domain.File.Services
 {
     public class FileService(StorageService storageService)
     {

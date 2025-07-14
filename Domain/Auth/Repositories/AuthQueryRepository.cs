@@ -1,7 +1,7 @@
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Databases;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetService.Domain.Auth.Repositories
+namespace InventoryService.Domain.Auth.Repositories
 {
     public class AuthQueryRepository(
         DotnetServiceDBContext context

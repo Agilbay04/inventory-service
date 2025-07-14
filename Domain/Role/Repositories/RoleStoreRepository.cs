@@ -1,8 +1,8 @@
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Exceptions;
 using DbDeleteConcurrencyException = Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException;
 
-namespace DotNetService.Domain.Role.Repositories
+namespace InventoryService.Domain.Role.Repositories
 {
     public class RoleStoreRepository(
         DotnetServiceDBContext context

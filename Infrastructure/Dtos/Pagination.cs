@@ -1,5 +1,5 @@
 
-namespace DotNetService.Infrastructure.Dtos
+namespace InventoryService.Infrastructure.Dtos
 {
     public class PaginationMeta
     {

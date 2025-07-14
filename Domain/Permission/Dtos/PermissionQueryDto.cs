@@ -1,6 +1,6 @@
-using DotNetService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Dtos;
 
-namespace DotNetService.Domain.Permission.Dtos
+namespace InventoryService.Domain.Permission.Dtos
 {
     public class PermissionQueryDto : QueryDto
     {

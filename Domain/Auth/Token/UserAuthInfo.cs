@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Auth.Token
+namespace InventoryService.Domain.Auth.Token
 {
     public class UserAuthInfo
     {

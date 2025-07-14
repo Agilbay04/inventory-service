@@ -1,6 +1,6 @@
-using DotNetService.Domain.Permission.Dtos;
+using InventoryService.Domain.Permission.Dtos;
 
-namespace DotNetService.Domain.Role.Dtos
+namespace InventoryService.Domain.Role.Dtos
 {
     public class RoleResultDto : Models.Role
     {

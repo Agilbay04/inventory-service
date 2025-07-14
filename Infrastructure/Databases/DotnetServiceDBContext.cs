@@ -1,8 +1,8 @@
 ﻿﻿using System.Linq.Expressions;
-using DotNetService.Models;
+using InventoryService.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetService.Infrastructure.Databases
+namespace InventoryService.Infrastructure.Databases
 {
     public partial class DotnetServiceDBContext(DbContextOptions<DotnetServiceDBContext> options) : DbContext(options)
     {

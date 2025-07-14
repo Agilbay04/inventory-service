@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Auth.Messages
+namespace InventoryService.Domain.Auth.Messages
 {
     public static class AuthErrorMessage
     {

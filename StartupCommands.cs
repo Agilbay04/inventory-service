@@ -1,4 +1,4 @@
-using DotNetService.Commands;
+using InventoryService.Commands;
 using RuangDeveloper.AspNetCore.Command;
 
 namespace DotNetService

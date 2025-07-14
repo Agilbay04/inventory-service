@@ -1,6 +1,6 @@
-using DotNetService.Constants.Permission;
+using InventoryService.Constants.Permission;
 
-namespace DotNetService.Infrastructure.Helpers
+namespace InventoryService.Infrastructure.Helpers
 {
   public static class PermissionUtil
   {

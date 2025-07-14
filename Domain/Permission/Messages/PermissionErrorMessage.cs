@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Permission.Messages
+namespace InventoryService.Domain.Permission.Messages
 {
     public static class PermissionErrorMessage
     {

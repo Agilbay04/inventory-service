@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using DotNetService.Domain.User.Services;
-using DotNetService.Infrastructure.Attributes;
-using DotNetService.Constants.Permission;
-using DotNetService.Domain.User.Dtos;
-using DotNetService.Infrastructure.Helpers;
+using InventoryService.Domain.User.Services;
+using InventoryService.Infrastructure.Attributes;
+using InventoryService.Constants.Permission;
+using InventoryService.Domain.User.Dtos;
+using InventoryService.Infrastructure.Helpers;
 
-namespace DotNetService.Http.API.Version1.User.Controllers
+namespace InventoryService.Http.API.Version1.User.Controllers
 {
     [Route("api/v1/users")]
     [ApiController]

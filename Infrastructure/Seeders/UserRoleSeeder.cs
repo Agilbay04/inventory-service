@@ -1,11 +1,11 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Models;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetService.Infrastructure.Seeders
+namespace InventoryService.Infrastructure.Seeders
 {
   class UserRoleJson
   {

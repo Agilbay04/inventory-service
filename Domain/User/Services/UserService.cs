@@ -1,10 +1,10 @@
-using DotNetService.Domain.User.Repositories;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Domain.User.Dtos;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Domain.User.Messages;
+using InventoryService.Domain.User.Repositories;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Domain.User.Dtos;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Domain.User.Messages;
 
-namespace DotNetService.Domain.User.Services
+namespace InventoryService.Domain.User.Services
 {
     public class UserService(
         UserQueryRepository userQueryRepository,

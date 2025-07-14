@@ -1,14 +1,14 @@
-using DotNetService.Constants.Logger;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Constants.Logger;
+using InventoryService.Infrastructure.Shareds;
 using NATS.Client.Core;
-using DotNetService.Constants.Event;
-using DotNetService.Infrastructure.Subscriptions;
+using InventoryService.Constants.Event;
+using InventoryService.Infrastructure.Subscriptions;
 using NATS.Client.JetStream;
 using NATS.Client.JetStream.Models;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Infrastructure.Attributes;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Attributes;
 
-namespace DotNetService.Infrastructure.Integrations.NATs
+namespace InventoryService.Infrastructure.Integrations.NATs
 {
     public class NATsIntegration
     {

@@ -1,11 +1,11 @@
-using DotNetService.Domain.Auth.Services;
-using DotNetService.Domain.File.Services;
-using DotNetService.Domain.Logging.Services;
-using DotNetService.Domain.Notification.Services;
-using DotNetService.Domain.Permission.Services;
-using DotNetService.Domain.Role.Services;
-using DotNetService.Domain.User.Services;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Domain.Auth.Services;
+using InventoryService.Domain.File.Services;
+using InventoryService.Domain.Logging.Services;
+using InventoryService.Domain.Notification.Services;
+using InventoryService.Domain.Permission.Services;
+using InventoryService.Domain.Role.Services;
+using InventoryService.Domain.User.Services;
+using InventoryService.Infrastructure.Shareds;
 
 namespace DotNetService
 {

@@ -1,10 +1,10 @@
-using DotNetService.Constants.Event;
-using DotNetService.Constants.Logger;
-using DotNetService.Infrastructure.Integrations.NATs;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Constants.Event;
+using InventoryService.Constants.Logger;
+using InventoryService.Infrastructure.Integrations.NATs;
+using InventoryService.Infrastructure.Shareds;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace DotNetService.Infrastructure.Events
+namespace InventoryService.Infrastructure.Events
 {
     public class PublishNATsLoggingEvent : IAsyncActionFilter
     {

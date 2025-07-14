@@ -1,9 +1,9 @@
-using DotNetService.Constants.Logger;
-using DotNetService.Domain.Logging.Services;
-using DotNetService.Infrastructure.Shareds;
-using DotNetService.Infrastructure.Subscriptions;
+using InventoryService.Constants.Logger;
+using InventoryService.Domain.Logging.Services;
+using InventoryService.Infrastructure.Shareds;
+using InventoryService.Infrastructure.Subscriptions;
 
-namespace DotNetService.Domain.Logging.Listeners
+namespace InventoryService.Domain.Logging.Listeners
 {
     public class LoggingNATsListener(
         ILoggerFactory loggerFactory,

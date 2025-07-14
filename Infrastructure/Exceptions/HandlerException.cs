@@ -1,12 +1,12 @@
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Infrastructure.Shareds;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 using System.Net;
 using System.Net.Mime;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Infrastructure.Dtos;
 
-namespace DotNetService.Infrastructure.Exceptions
+namespace InventoryService.Infrastructure.Exceptions
 {
     public class HandlerException(
         RequestDelegate next,

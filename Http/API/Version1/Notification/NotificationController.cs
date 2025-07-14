@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using DotNetService.Domain.Notification.Services;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Domain.Notification.Dtos;
+using InventoryService.Domain.Notification.Services;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Domain.Notification.Dtos;
 
-namespace DotNetService.Http.API.Version1.Notification
+namespace InventoryService.Http.API.Version1.Notification
 {
     [Route("api/v1/notifications")]
     [ApiController]

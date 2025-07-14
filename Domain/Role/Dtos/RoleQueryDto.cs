@@ -1,6 +1,6 @@
-using DotNetService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Dtos;
 
-namespace DotNetService.Domain.Role.Dtos
+namespace InventoryService.Domain.Role.Dtos
 {
     public class RoleQueryDto : QueryDto
     {

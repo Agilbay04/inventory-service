@@ -5,25 +5,25 @@ using Polly.Extensions.Http;
 using FluentValidation.AspNetCore;
 using StackExchange.Redis;
 using Microsoft.EntityFrameworkCore;
-using DotNetService.Infrastructure.Integrations.Http;
-using DotNetService.Constants.Logger;
+using InventoryService.Infrastructure.Integrations.Http;
+using InventoryService.Constants.Logger;
 using Microsoft.AspNetCore.DataProtection;
-using DotNetService.Infrastructure.Middlewares;
-using DotNetService.Infrastructure.Filters;
+using InventoryService.Infrastructure.Middlewares;
+using InventoryService.Infrastructure.Filters;
 using Microsoft.AspNetCore.Mvc;
 using NATS.Client.Hosting;
 using NATS.Client.Core;
-using DotNetService.Infrastructure.Queues;
-using DotNetService.Infrastructure.BackgroundHosted;
+using InventoryService.Infrastructure.Queues;
+using InventoryService.Infrastructure.BackgroundHosted;
 using System.Net;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.ModelBinder;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.ModelBinder;
 using Quartz;
-using DotNetService.Infrastructure.Jobs;
-using DotNetService.Infrastructure.Logging;
+using InventoryService.Infrastructure.Jobs;
+using InventoryService.Infrastructure.Logging;
 using Microsoft.Extensions.Logging.Console;
-using DotNetService.Infrastructure.Email;
+using InventoryService.Infrastructure.Email;
 
 namespace DotNetService
 {

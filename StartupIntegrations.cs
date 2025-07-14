@@ -1,6 +1,6 @@
-using DotNetService.Infrastructure.BackgroundHosted;
-using DotNetService.Infrastructure.Integrations.Http;
-using DotNetService.Infrastructure.Integrations.NATs;
+using InventoryService.Infrastructure.BackgroundHosted;
+using InventoryService.Infrastructure.Integrations.Http;
+using InventoryService.Infrastructure.Integrations.NATs;
 
 namespace DotNetService
 {

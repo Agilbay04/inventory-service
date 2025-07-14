@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DotNetService.Models
+namespace InventoryService.Models
 {
     public class RolePermission : BaseModel
     {

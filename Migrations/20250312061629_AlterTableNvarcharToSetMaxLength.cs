@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DotNetService.Migrations
+namespace InventoryService.Migrations
 {
     /// <inheritdoc />
     public partial class AlterTableNvarcharToSetMaxLength : Migration

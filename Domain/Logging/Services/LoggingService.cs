@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Logging.Services
+namespace InventoryService.Domain.Logging.Services
 {
     public class LoggingService
     {

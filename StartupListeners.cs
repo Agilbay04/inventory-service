@@ -1,4 +1,4 @@
-using DotNetService.Domain.Logging.Listeners;
+using InventoryService.Domain.Logging.Listeners;
 
 namespace DotNetService
 {

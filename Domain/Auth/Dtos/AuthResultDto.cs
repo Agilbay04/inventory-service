@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Auth.Dtos
+namespace InventoryService.Domain.Auth.Dtos
 {
     public class AuthTokenResultDto
     {

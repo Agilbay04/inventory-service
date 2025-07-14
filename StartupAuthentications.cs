@@ -1,5 +1,5 @@
-using DotNetService.Domain.Auth.Util;
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Domain.Auth.Util;
+using InventoryService.Infrastructure.Databases;
 
 namespace DotNetService
 {

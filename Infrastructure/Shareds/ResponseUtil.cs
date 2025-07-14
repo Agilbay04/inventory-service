@@ -1,4 +1,4 @@
-namespace DotNetService.Infrastructure.Shareds
+namespace InventoryService.Infrastructure.Shareds
 {
     public static class ResponseUtil
     {

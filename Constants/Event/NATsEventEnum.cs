@@ -1,4 +1,4 @@
-namespace DotNetService.Constants.Event
+namespace InventoryService.Constants.Event
 {
     public enum NATsEventCommon
     {

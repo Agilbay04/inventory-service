@@ -1,5 +1,5 @@
 
-namespace DotNetService.Infrastructure.Queues {
+namespace InventoryService.Infrastructure.Queues {
     public class MonitorLoop(
         BackgroundTaskQueue taskQueue,
         ILogger<MonitorLoop> logger,

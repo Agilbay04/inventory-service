@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-using DotNetService.Infrastructure.Regexs;
+using InventoryService.Infrastructure.Regexs;
 using BC = BCrypt.Net.BCrypt;
 
-namespace DotNetService.Domain.User.Dtos
+namespace InventoryService.Domain.User.Dtos
 {
     public class UserCreateDto
     {

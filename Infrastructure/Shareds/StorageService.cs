@@ -1,12 +1,12 @@
 using Amazon;
 using Amazon.S3;
 using Amazon.S3.Model;
-using DotNetService.Constants.Logger;
-using DotNetService.Constants.Storage;
-using DotNetService.Domain.File.Dto;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Constants.Logger;
+using InventoryService.Constants.Storage;
+using InventoryService.Domain.File.Dto;
+using InventoryService.Infrastructure.Exceptions;
 
-namespace DotNetService.Infrastructure.Shareds
+namespace InventoryService.Infrastructure.Shareds
 {
 
     public class StorageService

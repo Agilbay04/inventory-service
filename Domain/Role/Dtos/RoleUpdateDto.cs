@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace DotNetService.Domain.Role.Dtos
+namespace InventoryService.Domain.Role.Dtos
 {
     public class RoleUpdateDto
     {

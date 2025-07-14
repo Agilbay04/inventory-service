@@ -1,5 +1,5 @@
 
-namespace DotNetService.Infrastructure.Regexs
+namespace InventoryService.Infrastructure.Regexs
 {
     public static class AuthRegex
     {

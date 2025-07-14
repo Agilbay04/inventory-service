@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Infrastructure.Integrations.NATs;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Infrastructure.Integrations.NATs;
+using InventoryService.Infrastructure.Shareds;
 
-namespace DotNetService.Http.API.Version1.NatsExample.Controllers
+namespace InventoryService.Http.API.Version1.NatsExample.Controllers
 {
     [Route("api/v1/nats")]
     [ApiController]

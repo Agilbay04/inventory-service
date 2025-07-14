@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Role.Messages
+namespace InventoryService.Domain.Role.Messages
 {
     public static class RoleErrorMessage
     {

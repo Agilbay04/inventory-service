@@ -17,6 +17,6 @@ RUN apt-get update \
   && apt-get install -y curl
 COPY --from=build-backend /app/out .
 
-CMD ["dotnet", "DotNetService.dll"]
+CMD ["dotnet", "InventoryService.dll"]
 
 EXPOSE 8080

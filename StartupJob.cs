@@ -1,4 +1,4 @@
-using DotNetService.Infrastructure.Jobs;
+using InventoryService.Infrastructure.Jobs;
 
 namespace DotNetService
 {

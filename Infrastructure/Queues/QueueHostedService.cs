@@ -1,6 +1,6 @@
-using DotNetService.Constants.Logger;
+using InventoryService.Constants.Logger;
 
-namespace DotNetService.Infrastructure.Queues {
+namespace InventoryService.Infrastructure.Queues {
 
     public class QueuedHostedService(
         BackgroundTaskQueue taskQueue,

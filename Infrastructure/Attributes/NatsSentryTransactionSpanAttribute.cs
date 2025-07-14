@@ -2,7 +2,7 @@ using PostSharp.Aspects;
 using PostSharp.Serialization;
 
 
-namespace DotNetService.Infrastructure.Attributes
+namespace InventoryService.Infrastructure.Attributes
 {
     [PSerializable]
     public class NatsSentryTransactionSpanAttribute : OnMethodBoundaryAspect

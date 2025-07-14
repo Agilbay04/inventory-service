@@ -1,4 +1,4 @@
-namespace DotNetService.Constants.Logger
+namespace InventoryService.Constants.Logger
 {
     public class LoggerConstant
     {

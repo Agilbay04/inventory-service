@@ -1,12 +1,12 @@
 using System.Linq.Expressions;
-using DotNetService.Domain.Role.Dtos;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Infrastructure.Repositories;
+using InventoryService.Domain.Role.Dtos;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetService.Domain.Role.Repositories
+namespace InventoryService.Domain.Role.Repositories
 {
     public class RoleQueryRepository(
         DotnetServiceDBContext context

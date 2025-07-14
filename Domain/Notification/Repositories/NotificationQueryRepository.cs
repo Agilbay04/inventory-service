@@ -1,11 +1,11 @@
 using System.Linq.Expressions;
-using DotNetService.Domain.Notification.Dtos;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Infrastructure.Repositories;
+using InventoryService.Domain.Notification.Dtos;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetService.Domain.Notification.Repositories
+namespace InventoryService.Domain.Notification.Repositories
 {
     public class NotificationQueryRepository(
         DotnetServiceDBContext context

@@ -1,6 +1,6 @@
-using DotNetService.Domain.Role.Dtos;
+using InventoryService.Domain.Role.Dtos;
 
-namespace DotNetService.Domain.User.Dtos
+namespace InventoryService.Domain.User.Dtos
 {
     public class UserResultDto : Models.User
     {

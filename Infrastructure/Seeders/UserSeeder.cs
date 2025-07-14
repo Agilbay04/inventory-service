@@ -1,10 +1,10 @@
 using System.Text.Json;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Models;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Models;
 using BC = BCrypt.Net.BCrypt;
 
-namespace DotNetService.Infrastructure.Seeders
+namespace InventoryService.Infrastructure.Seeders
 {
   public class UserSeeder : ISeeder
   {

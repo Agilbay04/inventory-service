@@ -1,4 +1,4 @@
-namespace DotNetService.Constants.Storage
+namespace InventoryService.Constants.Storage
 {
     public class StorageConstant
     {

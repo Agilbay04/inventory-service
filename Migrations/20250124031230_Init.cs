@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DotNetService.Migrations
+namespace InventoryService.Migrations
 {
     /// <inheritdoc />
     public partial class Init : Migration

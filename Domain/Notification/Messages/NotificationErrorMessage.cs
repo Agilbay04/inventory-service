@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Notification.Messages
+namespace InventoryService.Domain.Notification.Messages
 {
     public static class NotificationErrorMessage
     {

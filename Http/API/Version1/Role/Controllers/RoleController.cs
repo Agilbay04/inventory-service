@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using DotNetService.Domain.Role.Services;
+using InventoryService.Domain.Role.Services;
 using System.Net;
-using DotNetService.Infrastructure.Attributes;
-using DotNetService.Constants.Permission;
-using DotNetService.Domain.Role.Dtos;
-using DotNetService.Infrastructure.Helpers;
+using InventoryService.Infrastructure.Attributes;
+using InventoryService.Constants.Permission;
+using InventoryService.Domain.Role.Dtos;
+using InventoryService.Infrastructure.Helpers;
 
-namespace DotNetService.Http.API.Version1.Role.Controllers
+namespace InventoryService.Http.API.Version1.Role.Controllers
 {
     [Route("api/v1/roles")]
     [ApiController]

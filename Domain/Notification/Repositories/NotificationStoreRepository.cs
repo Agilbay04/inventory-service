@@ -1,8 +1,8 @@
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
-namespace DotNetService.Domain.Notification.Repositories
+namespace InventoryService.Domain.Notification.Repositories
 {
     public class NotificationStoreRepository(
         DotnetServiceDBContext context

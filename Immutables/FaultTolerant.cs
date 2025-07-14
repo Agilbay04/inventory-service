@@ -1,4 +1,4 @@
-namespace DotNetService.Immutables {
+namespace InventoryService.Immutables {
     public class FaultTolerant
     {
         public class Incident { 

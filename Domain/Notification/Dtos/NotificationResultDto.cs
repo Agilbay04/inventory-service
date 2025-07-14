@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Notification.Dtos
+namespace InventoryService.Domain.Notification.Dtos
 {
     public class NotificationResultDto : Models.Notification
     {

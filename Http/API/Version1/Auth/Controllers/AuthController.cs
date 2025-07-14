@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using DotNetService.Domain.Auth.Services;
+using InventoryService.Domain.Auth.Services;
 using Microsoft.AspNetCore.Authorization;
-using DotNetService.Infrastructure.Helpers;
-using DotNetService.Domain.Auth.Dtos;
+using InventoryService.Infrastructure.Helpers;
+using InventoryService.Domain.Auth.Dtos;
 
-namespace DotNetService.Http.API.Version1.Auth.Controllers
+namespace InventoryService.Http.API.Version1.Auth.Controllers
 {
     [ApiController]
     [Route("api/v1/auth")]

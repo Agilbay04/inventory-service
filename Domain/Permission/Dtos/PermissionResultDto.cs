@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.Permission.Dtos
+namespace InventoryService.Domain.Permission.Dtos
 {
     public class PermissionResultDto : Models.Permission
     {

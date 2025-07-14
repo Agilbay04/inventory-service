@@ -1,9 +1,9 @@
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using DbDeleteConcurrencyException = Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException;
 
-namespace DotNetService.Domain.User.Repositories
+namespace InventoryService.Domain.User.Repositories
 {
     public class UserStoreRepository(
         DotnetServiceDBContext context

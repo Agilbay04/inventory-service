@@ -1,11 +1,11 @@
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Domain.Notification.Repositories;
-using DotNetService.Domain.Notification.Dtos;
-using DotNetService.Domain.Notification.Messages;
-using DotNetService.Infrastructure.Shareds;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Domain.Notification.Repositories;
+using InventoryService.Domain.Notification.Dtos;
+using InventoryService.Domain.Notification.Messages;
+using InventoryService.Infrastructure.Shareds;
 
-namespace DotNetService.Domain.Notification.Services
+namespace InventoryService.Domain.Notification.Services
 {
     public class NotificationService(
         NotificationQueryRepository NotificationQueryRepository,

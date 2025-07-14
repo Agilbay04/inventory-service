@@ -1,8 +1,8 @@
-using DotNetService.Domain.Auth.Repositories;
-using DotNetService.Domain.Notification.Repositories;
-using DotNetService.Domain.Permission.Repositories;
-using DotNetService.Domain.Role.Repositories;
-using DotNetService.Domain.User.Repositories;
+using InventoryService.Domain.Auth.Repositories;
+using InventoryService.Domain.Notification.Repositories;
+using InventoryService.Domain.Permission.Repositories;
+using InventoryService.Domain.Role.Repositories;
+using InventoryService.Domain.User.Repositories;
 
 namespace DotNetService
 {

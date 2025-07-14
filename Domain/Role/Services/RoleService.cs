@@ -1,10 +1,10 @@
-using DotNetService.Domain.Role.Dtos;
-using DotNetService.Domain.Role.Messages;
-using DotNetService.Domain.Role.Repositories;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Domain.Role.Dtos;
+using InventoryService.Domain.Role.Messages;
+using InventoryService.Domain.Role.Repositories;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Exceptions;
 
-namespace DotNetService.Domain.Role.Services
+namespace InventoryService.Domain.Role.Services
 {
     public class RoleService(
         RoleStoreRepository roleStoreRepository,

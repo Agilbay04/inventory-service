@@ -1,8 +1,8 @@
 
 
-using DotNetService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Dtos;
 
-namespace DotNetService.Domain.User.Dtos
+namespace InventoryService.Domain.User.Dtos
 {
     public class UserQueryDto : QueryDto
     {

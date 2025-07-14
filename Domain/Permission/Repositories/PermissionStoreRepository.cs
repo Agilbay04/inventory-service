@@ -1,11 +1,11 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Exceptions;
 using DbDeleteConcurrencyException = Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException;
 
 
-namespace DotNetService.Domain.Permission.Repositories
+namespace InventoryService.Domain.Permission.Repositories
 {
     public class PermissionStoreRepository(
         DotnetServiceDBContext context

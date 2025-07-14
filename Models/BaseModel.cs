@@ -1,4 +1,4 @@
-namespace DotNetService.Models
+namespace InventoryService.Models
 {
     [Serializable]
     public class BaseModel

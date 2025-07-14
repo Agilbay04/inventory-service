@@ -1,12 +1,12 @@
 using System.Linq.Expressions;
-using DotNetService.Domain.User.Dtos;
-using DotNetService.Infrastructure.Dtos;
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Repositories;
+using InventoryService.Domain.User.Dtos;
+using InventoryService.Infrastructure.Dtos;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DotNetService.Domain.User.Repositories
+namespace InventoryService.Domain.User.Repositories
 {
     public partial class UserQueryRepository(
         DotnetServiceDBContext context

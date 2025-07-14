@@ -1,9 +1,9 @@
-using DotNetService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Databases;
 using Microsoft.EntityFrameworkCore;
-using DotNetService.Constants.Logger;
+using InventoryService.Constants.Logger;
 using Quartz;
 
-namespace DotNetService.Infrastructure.Jobs
+namespace InventoryService.Infrastructure.Jobs
 {
     public class NotificationHouseKeepingJob(
         DotnetServiceDBContext context,

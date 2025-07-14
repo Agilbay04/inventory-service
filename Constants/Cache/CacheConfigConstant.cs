@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace DotNetService.Constants.Cache
+namespace InventoryService.Constants.Cache
 {
     public class CacheConstant
     {

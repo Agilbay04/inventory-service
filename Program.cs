@@ -1,4 +1,4 @@
-using DotNetService.Infrastructure.Filters;
+using InventoryService.Infrastructure.Filters;
 using RuangDeveloper.AspNetCore.Command;
 
 namespace DotNetService

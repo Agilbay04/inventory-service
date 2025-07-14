@@ -1,4 +1,4 @@
-namespace DotNetService.Domain.User.Messages
+namespace InventoryService.Domain.User.Messages
 {
     public static class UserErrorMessage
     {

@@ -1,9 +1,9 @@
 
-using DotNetService.Constants.Event;
-using DotNetService.Domain.Logging.Listeners;
-using DotNetService.Infrastructure.Integrations.NATs;
+using InventoryService.Constants.Event;
+using InventoryService.Domain.Logging.Listeners;
+using InventoryService.Infrastructure.Integrations.NATs;
 
-namespace DotNetService.Infrastructure.BackgroundHosted
+namespace InventoryService.Infrastructure.BackgroundHosted
 {
     public class NATsTask(
         IServiceScopeFactory serviceScopeFactory,

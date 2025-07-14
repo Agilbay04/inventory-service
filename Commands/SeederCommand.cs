@@ -1,10 +1,10 @@
 
-using DotNetService.Infrastructure.Databases;
-using DotNetService.Infrastructure.Exceptions;
-using DotNetService.Infrastructure.Seeders;
+using InventoryService.Infrastructure.Databases;
+using InventoryService.Infrastructure.Exceptions;
+using InventoryService.Infrastructure.Seeders;
 using RuangDeveloper.AspNetCore.Command;
 
-namespace DotNetService.Commands
+namespace InventoryService.Commands
 {
     public class SeederCommand(
         IServiceProvider serviceProvider
@@ -34,7 +34,7 @@ namespace DotNetService.Commands
                 for (var i = 0; i < fileNames.Count; i++)
                 {
                     /* -------------------------- Insert seed data here ------------------------- */
-                    var type = Type.GetType("DotNetService.Infrastructure.Seeders." + fileNames[i]);
+                    var type = Type.GetType("InventoryService.Infrastructure.Seeders." + fileNames[i]);
                     logger.LogInformation("Seeding: {SeederName}", fileNames[i]);
                     if (type != null)
                     {

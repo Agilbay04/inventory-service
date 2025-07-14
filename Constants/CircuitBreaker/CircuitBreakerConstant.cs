@@ -1,6 +1,6 @@
 
 
-namespace DotNetService.Constants.CircuitBreaker
+namespace InventoryService.Constants.CircuitBreaker
 {
     public class CircuitBreakerConstant {
         public const string CIRUCUIT_BREAKER_PREFIX = "CIRCUIT-BREAKER";
