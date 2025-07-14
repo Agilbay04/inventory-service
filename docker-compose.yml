@@ -7,6 +7,7 @@ services:
     ports:
       - "4222:4222"
       - "5222:5222"
+
   mssql:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: dotnet-ms-mssql
@@ -14,4 +15,10 @@ services:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: rahasia123!
     ports: 
-      - "1433:1433"
+      - "1434:1433"
+
+  redis:
+    image: redis:alpine
+    container_name: dotnet-ms-redis
+    ports:
+      - "6379:6379"
