@@ -1,4 +1,5 @@
 using InventoryService.Domain.Logging.Listeners;
+using InventoryService.Domain.Product.Listeners;
 
 namespace InventoryService
 {
@@ -8,6 +9,8 @@ namespace InventoryService
         {
             services.AddScoped<LoggingNATsListener>();
             services.AddScoped<LoggingNATsListenAndReply>();
+            services.AddScoped<GetProductByIdsNATsListenAndReply>();
+            services.AddScoped<GetAllProductNATsListener>();
         }
     }
 }

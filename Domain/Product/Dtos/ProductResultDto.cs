@@ -5,6 +5,8 @@ namespace InventoryService.Domain.Product.Dtos
         public Guid Id { get; set; } = product.Id;
         public string Code { get; set; } = product.Code;
         public string Name { get; set; } = product.Name;
+        public Guid CategoryId { get; set; } = product.CategoryId;
+        public string CategoryKey { get; set; } = product.Category.Key;
         public string CategoryName { get; set; } = product.Category.Name;
         public string IsPublish { get; set; } = GetPublishStatus(product.IsPublish);
         public int Stock { get; set; } = product.Stock;

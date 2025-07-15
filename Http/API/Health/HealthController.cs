@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryService.Http.API.Health
 {
-    [Route("health")]
+    [Route("inventory-service/health")]
     [ApiController]
     [AllowAnonymous]
     public class HealthController
@@ -12,7 +12,10 @@ namespace InventoryService.Http.API.Health
         [HttpGet]
         public ApiResponseData<object> Get()
         {
-            return new ApiResponseData<object>(System.Net.HttpStatusCode.OK, new { message = "Service is running, and Healty" });
+            return new ApiResponseData<object>(
+                System.Net.HttpStatusCode.OK,
+                new { message = "Inventory Service is running, and Healty" }
+            );
         }
     }
 }

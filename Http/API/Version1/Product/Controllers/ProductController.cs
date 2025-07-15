@@ -20,8 +20,8 @@ namespace InventoryService.Http.API.Version1.Product.Controllers
         [HttpGet()]
         public async Task<ApiResponse> Index([FromQuery] ProductQueryDto query)
         {
-            var data = await _productService.FindAll(query);
-            return new ApiResponseData<PaginationModel<ProductResultDto>>(HttpStatusCode.OK, data);
+            var data = await _productService.FindAllAsync(query);
+            return new ApiResponsePagination<ProductResultDto>(HttpStatusCode.OK, data);
         }
 
         [HttpGet("{id}")]

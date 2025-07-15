@@ -13,9 +13,9 @@ namespace InventoryService.Domain.Product.Services
     {
         private readonly ProductQueryRepository _productQueryRepository = productQueryRepository;
 
-        public async Task<PaginationModel<ProductResultDto>> FindAll(ProductQueryDto query = null)
+        public async Task<PaginationModel<ProductResultDto>> FindAllAsync(ProductQueryDto query = null)
         {
-            var data = await _productQueryRepository.Pagination(query);
+            var data = await _productQueryRepository.PaginationAsync(query);
             var formatedData = ProductResultDto.MapRepo(data.Data);
             var paginate = PaginationModel<ProductResultDto>.Parse(formatedData, data.Count, query);
             return paginate;
@@ -27,6 +27,13 @@ namespace InventoryService.Domain.Product.Services
                 throw new DataNotFoundException(ProductErrorMessage.ErrProductNotFound);
 
             return new ProductResultDto(data);
+        }
+
+        public List<ProductResultDto> FindAll(ProductQueryDto query = null)
+        {
+            var data = _productQueryRepository.Pagination(query);
+            var formatedData = ProductResultDto.MapRepo(data.Data);
+            return formatedData;
         }
 
         public List<ProductResultDto> FindByIds(List<Guid> ids = null)

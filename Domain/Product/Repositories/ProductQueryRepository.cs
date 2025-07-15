@@ -1,4 +1,3 @@
-using InventoryService.Domain.Inventory.Dtos;
 using InventoryService.Domain.Product.Dtos;
 using InventoryService.Infrastructure.Databases;
 using InventoryService.Infrastructure.Dtos;
@@ -13,13 +12,14 @@ namespace InventoryService.Domain.Product.Repositories
     {
         private readonly DataContext _dbContext = dbContext;
 
-        public async Task<PaginationResult<Models.Product>> Pagination(ProductQueryDto queryParams)
+        public async Task<PaginationResult<Models.Product>> PaginationAsync(ProductQueryDto queryParams)
         {
             int skip = (queryParams.Page - 1) * queryParams.PerPage;
             var query = _dbContext.Products
                 .AsNoTracking()
                 .Include(data => data.Category)
-                .Where(data => data.DeletedAt == null
+                .Where(data => data.IsPublish == true
+                    && data.DeletedAt == null
                     && data.Category.DeletedAt == null)
                 .AsQueryable();
 
@@ -28,7 +28,32 @@ namespace InventoryService.Domain.Product.Repositories
             query = QuerySort(query, queryParams);
 
             var data = await query.Skip(skip).Take(queryParams.PerPage).ToListAsync();
-            var count = await Count(query);
+            var count = await CountAsync(query);
+
+            return new PaginationResult<Models.Product>
+            {
+                Data = data,
+                Count = count
+            };
+        }
+
+        public PaginationResult<Models.Product> Pagination(ProductQueryDto queryParams)
+        {
+            int skip = (queryParams.Page - 1) * queryParams.PerPage;
+            var query = _dbContext.Products
+                .AsNoTracking()
+                .Include(data => data.Category)
+                .Where(data => data.IsPublish == true
+                    && data.DeletedAt == null
+                    && data.Category.DeletedAt == null)
+                .AsQueryable();
+
+            query = QuerySearch(query, queryParams);
+            query = QueryFilter(query, queryParams);
+            query = QuerySort(query, queryParams);
+
+            var data = query.Skip(skip).Take(queryParams.PerPage).ToList();
+            var count = Count(query);
 
             return new PaginationResult<Models.Product>
             {
@@ -55,7 +80,12 @@ namespace InventoryService.Domain.Product.Repositories
         {
             if (!queryParams.Name.IsNullOrEmpty())
             {
-                query = query.Where(data => data.Name.Equals(queryParams));
+                query = query.Where(data => data.Name.Equals(queryParams.Name));
+            }
+
+            if (!queryParams.Code.IsNullOrEmpty())
+            {
+                query = query.Where(data => data.Code.Equals(queryParams.Code));
             }
 
             return query;
@@ -84,9 +114,14 @@ namespace InventoryService.Domain.Product.Repositories
             return query;
         }
 
-        public async Task<int> Count(IQueryable<Models.Product> query)
+        public async Task<int> CountAsync(IQueryable<Models.Product> query)
         {
             return await query.Select(x => x.Id).CountAsync();
+        }
+        
+        public int Count(IQueryable<Models.Product> query)
+        {
+            return query.Select(x => x.Id).Count();
         }
 
         public async Task<Models.Product> FindOneById(Guid id)
@@ -95,6 +130,7 @@ namespace InventoryService.Domain.Product.Repositories
                 .AsNoTracking()
                 .Include(data => data.Category)
                 .Where(data => data.Id == id
+                    && data.IsPublish == true
                     && data.DeletedAt == null
                     && data.Category.DeletedAt == null)
                 .FirstOrDefaultAsync();
@@ -106,6 +142,7 @@ namespace InventoryService.Domain.Product.Repositories
                 .AsNoTracking()
                 .Include(data => data.Category)
                 .Where(data => ids.Contains(data.Id)
+                    && data.IsPublish == true
                     && data.DeletedAt == null
                     && data.Category.DeletedAt == null)];
         }

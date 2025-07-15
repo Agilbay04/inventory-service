@@ -1,6 +1,7 @@
 
 using InventoryService.Constants.Event;
 using InventoryService.Domain.Logging.Listeners;
+using InventoryService.Domain.Product.Listeners;
 using InventoryService.Infrastructure.Integrations.NATs;
 
 namespace InventoryService.Infrastructure.BackgroundHosted
@@ -40,9 +41,21 @@ namespace InventoryService.Infrastructure.BackgroundHosted
             );
 
             /*==================== Product ====================*/
-            
+            _natsIntegration.InitListenAndReplyTask<GetProductByIdsNATsListenAndReply>(serviceScopeFactory,
+                _natsIntegration.Subject(
+                    NATsEventModuleEnum.PRODUCT,
+                    NATsEventActionEnum.GET_BY_IDS,
+                    NATsEventStatusEnum.REQUEST
+                )
+            );
 
-            /*==================== Other Module ====================*/
+            _natsIntegration.InitListenAndReplyTask<GetAllProductNATsListener>(serviceScopeFactory,
+                _natsIntegration.Subject(
+                    NATsEventModuleEnum.PRODUCT,
+                    NATsEventActionEnum.GET,
+                    NATsEventStatusEnum.REQUEST
+                )
+            );
         }
     }
 }

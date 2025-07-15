@@ -7,10 +7,10 @@ using InventoryService.Infrastructure.Subscriptions;
 
 namespace InventoryService.Domain.Product.Listeners
 {
-    public class GetProductByIdsNATsListenAndReply(
+    public class GetAllProductNATsListener(
         ILoggerFactory loggerFactory,
         ProductService productService
-    ) : IReplyAction<IDictionary<string, object>, IDictionary<string, object>>
+    ) :  IReplyAction<IDictionary<string, object>, IDictionary<string, object>>
     {
         private readonly ILogger<GetProductByIdsNATsListenAndReply> _logger = loggerFactory.CreateLogger<GetProductByIdsNATsListenAndReply>();
         private readonly ProductService _productService = productService;
@@ -22,10 +22,10 @@ namespace InventoryService.Domain.Product.Listeners
                 var jsonData = Utils.JsonSerialize(data);
                 _logger.LogInformation("Get Subscribed data: {jsonData}", jsonData);
 
-                var responseData = Utils.JsonDeserialize<ApiResponseData<List<Guid>>>(jsonData);
-                List<Guid> param = responseData.Data;
+                var responseData = Utils.JsonDeserialize<ApiResponseData<ProductQueryDto>>(jsonData);
+                var param = responseData.Data;
 
-                var result = _productService.FindByIds(param);
+                var result = _productService.FindAll(param);
 
                 if (result == null || result.Count == 0)
                 {
@@ -38,7 +38,7 @@ namespace InventoryService.Domain.Product.Listeners
             {
                 _logger.LogError(
                     ex,
-                    "<{className}> Error On Get Product By Ids: {messages}",
+                    "<{className}> Error On Get All Product: {messages}",
                     nameof(GetProductByIdsNATsListenAndReply),
                     ex.Message
                 );

@@ -5,11 +5,13 @@ using InventoryService.Infrastructure.Attributes;
 using InventoryService.Constants.Permission;
 using InventoryService.Domain.Role.Dtos;
 using InventoryService.Infrastructure.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryService.Http.API.Version1.Role.Controllers
 {
     [Route("api/v1/roles")]
     [ApiController]
+    [AllowAnonymous]
     public class RoleController(
         RoleService roleService
         ) : ControllerBase
@@ -17,7 +19,7 @@ namespace InventoryService.Http.API.Version1.Role.Controllers
         private readonly RoleService _roleService = roleService;
 
         [HttpGet()]
-        [Permissions(PermissionConstant.ROLE_VIEW)]
+        // [Permissions(PermissionConstant.ROLE_VIEW)]
         public async Task<ApiResponse> Index([FromQuery] RoleQueryDto query)
         {
             var paginationResult = await _roleService.Index(query);
@@ -25,7 +27,7 @@ namespace InventoryService.Http.API.Version1.Role.Controllers
         }
 
         [HttpGet("{id}")]
-        [Permissions(PermissionConstant.ROLE_VIEW)]
+        // [Permissions(PermissionConstant.ROLE_VIEW)]
         public async Task<ApiResponse> Show(Guid id)
         {
             var role = await _roleService.DetailById(id);
