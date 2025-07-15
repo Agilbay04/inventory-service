@@ -1,5 +1,6 @@
 using InventoryService.Domain.Auth.Services;
 using InventoryService.Domain.File.Services;
+using InventoryService.Domain.Product.Services;
 using InventoryService.Domain.Logging.Services;
 using InventoryService.Domain.Notification.Services;
 using InventoryService.Domain.Permission.Services;
@@ -23,6 +24,7 @@ namespace InventoryService
             services.AddScoped<FileService>();
 
             services.AddScoped<NotificationService>();
+            services.AddScoped<ProductService>();
         }
     }
 }

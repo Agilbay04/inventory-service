@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryService.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250714082234_AddInventoryTable")]
-    partial class AddInventoryTable
+    [Migration("20250715041615_AddTableCategoryAndProduct")]
+    partial class AddTableCategoryAndProduct
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,46 @@ namespace InventoryService.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("InventoryService.Models.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("deleted_at");
+
+                    b.Property<string>("Key")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("key");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("name");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Id")
+                        .HasName("pk_categories");
+
+                    b.HasIndex("Key")
+                        .IsUnique()
+                        .HasDatabaseName("ix_categories_key")
+                        .HasFilter("[key] IS NOT NULL");
+
+                    b.ToTable("categories", (string)null);
+                });
 
             modelBuilder.Entity("InventoryService.Models.Notification", b =>
                 {
@@ -123,6 +163,70 @@ namespace InventoryService.Migrations
                         .HasFilter("[key] IS NOT NULL");
 
                     b.ToTable("permissions", (string)null);
+                });
+
+            modelBuilder.Entity("InventoryService.Models.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("NEWID()");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("category_id");
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("code");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("created_at");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("deleted_at");
+
+                    b.Property<bool>("IsPublish")
+                        .HasColumnType("bit")
+                        .HasColumnName("is_publish");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("name");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("price");
+
+                    b.Property<int>("Stock")
+                        .HasMaxLength(6)
+                        .HasColumnType("int")
+                        .HasColumnName("stock");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("updated_at");
+
+                    b.HasKey("Id")
+                        .HasName("pk_products");
+
+                    b.HasIndex("CategoryId")
+                        .HasDatabaseName("ix_products_category_id");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("ix_products_code")
+                        .HasFilter("[code] IS NOT NULL");
+
+                    b.HasIndex("Id")
+                        .HasDatabaseName("ix_products_id");
+
+                    b.ToTable("products", (string)null);
                 });
 
             modelBuilder.Entity("InventoryService.Models.Role", b =>
@@ -316,6 +420,18 @@ namespace InventoryService.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("InventoryService.Models.Product", b =>
+                {
+                    b.HasOne("InventoryService.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Products_Categories");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("InventoryService.Models.RolePermission", b =>
                 {
                     b.HasOne("InventoryService.Models.Permission", "Permission")
@@ -356,6 +472,11 @@ namespace InventoryService.Migrations
                     b.Navigation("Role");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("InventoryService.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("InventoryService.Models.Permission", b =>

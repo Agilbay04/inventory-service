@@ -1,0 +1,38 @@
+[
+    {
+        "key": "bahan-pokok",
+        "name": "Bahan Pokok"
+    },
+    {
+        "key": "snack",
+        "name": "Snack"
+    },
+    {
+        "key": "minuman",
+        "name": "Minuman"
+    },
+    {
+        "key": "makanan",
+        "name": "Makanan"
+    },
+    {
+        "key": "bumbu",
+        "name": "Bumbu"
+    },
+    {
+        "key": "kosmetik",
+        "name": "Kosmetik"
+    },
+    {
+        "key": "sabun",
+        "name": "Sabun"
+    },
+    {
+        "key": "elektronik",
+        "name": "Elektronik"
+    },
+    {
+        "key": "lainnya",
+        "name": "Lainnya"
+    }
+]

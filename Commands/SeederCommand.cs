@@ -59,6 +59,8 @@ namespace InventoryService.Commands
                 await new PermissionSeeder().Seed(dbContext, logger);
                 await new RolePermissionSeeder().Seed(dbContext, logger);
                 await new UserRoleSeeder().Seed(dbContext, logger);
+                await new CategorySeeder().Seed(dbContext, logger);
+                await new ProductSeeder().Seed(dbContext, logger);
             }
 
             logger.LogInformation("-------------------------- Seed Finish --------------------------");

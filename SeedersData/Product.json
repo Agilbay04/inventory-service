@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Beras Super Lele",
+        "is_publish": true,
+        "code": "P000001",
+        "key": "bahan-pokok",
+        "price": 70000,
+        "stock": 10
+    },
+    {
+        "name": "Gula Pasir",
+        "is_publish": true,
+        "code": "P000002",
+        "key": "bahan-pokok",
+        "price": 10000,
+        "stock": 5
+    },
+    {
+        "name": "Kripik Usus",
+        "is_publish": true,
+        "code": "P000003",
+        "key": "snack",
+        "price": 8000,
+        "stock": 50
+    },
+    {
+        "name": "Kripik Basreng",
+        "is_publish": true,
+        "code": "P000004",
+        "key": "snack",
+        "price": 8000,
+        "stock": 100
+    },
+    {
+        "name": "Ultra Milk 1L",
+        "is_publish": true,
+        "code": "P000005",
+        "key": "minuman",
+        "price": 15000,
+        "stock": 30
+    },
+    {
+        "name": "Parfum Pria",
+        "is_publish": true,
+        "code": "P000006",
+        "key": "kosmetik",
+        "price": 25000,
+        "stock": 20
+    },
+    {
+        "name": "Sabun Biore Cair 450ml",
+        "is_publish": true,
+        "code": "P000007",
+        "key": "sabun",
+        "price": 24000,
+        "stock": 100
+    },
+    {
+        "name": "Kipas Angin Portable",
+        "is_publish": true,
+        "code": "P000008",
+        "key": "elektronik",
+        "price": 200000,
+        "stock": 100
+    },
+    {
+        "name": "Lampu 60 Watt",
+        "is_publish": true,
+        "code": "P000009",
+        "key": "elektronik",
+        "price": 50000,
+        "stock": 100
+    }
+]

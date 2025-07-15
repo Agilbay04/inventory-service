@@ -7,18 +7,13 @@ namespace InventoryService.Infrastructure.Databases
     public partial class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
     {
         public DbSet<Role> Roles { get; set; }
-
         public DbSet<User> Users { get; set; }
-
         public DbSet<Permission> Permissions { get; set; }
-
         public DbSet<UserRole> UserRoles { get; set; }
-
         public DbSet<RolePermission> RolePermissions { get; set; }
-
         public DbSet<Notification> Notifications { get; set; }
-
-        public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,8 +34,8 @@ namespace InventoryService.Infrastructure.Databases
             SoftDelete<UserRole>(modelBuilder);
             GenerateUuid<RolePermission>(modelBuilder, "Id");
             SoftDelete<RolePermission>(modelBuilder);
-            GenerateUuid<Inventory>(modelBuilder, "Id");
-            SoftDelete<Inventory>(modelBuilder);
+            GenerateUuid<Product>(modelBuilder, "Id");
+            SoftDelete<Product>(modelBuilder);
 
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
@@ -57,6 +52,23 @@ namespace InventoryService.Infrastructure.Databases
             modelBuilder.Entity<Notification>()
                 .Property(n => n.IsRead)
                 .HasDefaultValue(false);
+
+            modelBuilder.Entity<Product>()
+                .HasIndex(p => p.Code)
+                .IsUnique();
+
+            modelBuilder.Entity<Product>()
+                .HasIndex(p => p.CategoryId);
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .HasConstraintName("FK_Products_Categories");
+
+            modelBuilder.Entity<Category>()
+                .HasIndex(c => c.Key)
+                .IsUnique();
         }
 
         public override int SaveChanges()

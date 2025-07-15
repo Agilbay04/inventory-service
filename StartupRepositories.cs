@@ -1,4 +1,5 @@
 using InventoryService.Domain.Auth.Repositories;
+using InventoryService.Domain.Product.Repositories;
 using InventoryService.Domain.Notification.Repositories;
 using InventoryService.Domain.Permission.Repositories;
 using InventoryService.Domain.Role.Repositories;
@@ -20,6 +21,7 @@ namespace InventoryService
             services.AddScoped<PermissionStoreRepository>();
             services.AddScoped<NotificationQueryRepository>();
             services.AddScoped<NotificationStoreRepository>();
+            services.AddScoped<ProductQueryRepository>();
         }
     }
 }
