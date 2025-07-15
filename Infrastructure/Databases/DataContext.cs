@@ -59,6 +59,10 @@ namespace InventoryService.Infrastructure.Databases
 
             modelBuilder.Entity<Product>()
                 .HasIndex(p => p.CategoryId);
+            
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.Category)
