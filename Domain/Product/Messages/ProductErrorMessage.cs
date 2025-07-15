@@ -1,6 +1,6 @@
 namespace InventoryService.Domain.Product.Messages
 {
-    public class ProductErrorMessagge
+    public class ProductErrorMessage
     {
         public const string ErrProductNotFound = "Data product not found";
     }

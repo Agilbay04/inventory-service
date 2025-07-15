@@ -99,5 +99,15 @@ namespace InventoryService.Domain.Product.Repositories
                     && data.Category.DeletedAt == null)
                 .FirstOrDefaultAsync();
         }
+
+        public List<Models.Product> FindByIds(List<Guid> ids)
+        {
+            return [.. _dbContext.Products
+                .AsNoTracking()
+                .Include(data => data.Category)
+                .Where(data => ids.Contains(data.Id)
+                    && data.DeletedAt == null
+                    && data.Category.DeletedAt == null)];
+        }
     }
 }

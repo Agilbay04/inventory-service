@@ -38,6 +38,10 @@ namespace InventoryService.Infrastructure.BackgroundHosted
                     NATsEventStatusEnum.INFO
                 )
             );
+
+            /*==================== Product ====================*/
+            
+
             /*==================== Other Module ====================*/
         }
     }

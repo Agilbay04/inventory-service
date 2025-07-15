@@ -3,6 +3,7 @@ using InventoryService.Domain.Product.Messages;
 using InventoryService.Domain.Product.Repositories;
 using InventoryService.Infrastructure.Dtos;
 using InventoryService.Infrastructure.Exceptions;
+using System.Reflection.Metadata.Ecma335;
 
 namespace InventoryService.Domain.Product.Services
 {
@@ -23,9 +24,15 @@ namespace InventoryService.Domain.Product.Services
         public async Task<ProductResultDto> FindOneById(Guid id = default)
         {
             var data = await _productQueryRepository.FindOneById(id) ??
-                throw new DataNotFoundException(ProductErrorMessagge.ErrProductNotFound);
+                throw new DataNotFoundException(ProductErrorMessage.ErrProductNotFound);
 
             return new ProductResultDto(data);
+        }
+
+        public List<ProductResultDto> FindByIds(List<Guid> ids = null)
+        {
+            var data = _productQueryRepository.FindByIds(ids);
+            return ProductResultDto.MapRepo(data);
         }
     }
 }

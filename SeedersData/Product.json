@@ -70,5 +70,29 @@
         "key": "elektronik",
         "price": 50000,
         "stock": 100
+    },
+    {
+        "name": "Lampu 100 Watt",
+        "is_publish": true,
+        "code": "P000010",
+        "key": "elektronik",
+        "price": 100000,
+        "stock": 100
+    },
+    {
+        "name": "Chopper Mini",
+        "is_publish": true,
+        "code": "P000011",
+        "key": "elektronik",
+        "price": 150000,
+        "stock": 130
+    },
+    {
+        "name": "Blender",
+        "is_publish": true,
+        "code": "P000012",
+        "key": "elektronik",
+        "price": 200000,
+        "stock": 100
     }
 ]
