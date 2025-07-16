@@ -1,4 +1,3 @@
-using InventoryService.Domain.Auth.Util;
 using InventoryService.Infrastructure.Databases;
 
 namespace InventoryService
@@ -8,7 +7,6 @@ namespace InventoryService
         public void Authentications(IServiceCollection services)
         {
             services.AddSingleton<LocalStorageDatabase>();
-            services.AddSingleton<AuthUtil>();
         }
     }
 }

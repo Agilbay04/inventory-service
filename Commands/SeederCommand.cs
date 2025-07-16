@@ -54,11 +54,6 @@ namespace InventoryService.Commands
             {
                 /* -------------------------- Insert seed data here ------------------------- */
                 /* ----------------------- Be careful about the sequences ------------------- */
-                await new UserSeeder().Seed(dbContext, logger);
-                await new RoleSeeder().Seed(dbContext, logger);
-                await new PermissionSeeder().Seed(dbContext, logger);
-                await new RolePermissionSeeder().Seed(dbContext, logger);
-                await new UserRoleSeeder().Seed(dbContext, logger);
                 await new CategorySeeder().Seed(dbContext, logger);
                 await new ProductSeeder().Seed(dbContext, logger);
             }

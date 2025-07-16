@@ -20,7 +20,6 @@ using InventoryService.Infrastructure.Exceptions;
 using InventoryService.Infrastructure.Databases;
 using InventoryService.Infrastructure.ModelBinder;
 using Quartz;
-using InventoryService.Infrastructure.Jobs;
 using InventoryService.Infrastructure.Logging;
 using Microsoft.Extensions.Logging.Console;
 using InventoryService.Infrastructure.Email;
@@ -160,29 +159,6 @@ namespace InventoryService
                 services.AddDistributedMemoryCache();
             }
 
-            // Quartz Scheduler
-            services.AddQuartz(q =>
-            {
-                // base Quartz scheduler, job and trigger configuration
-                var jobKey = new JobKey("NotificationHouseKeeping");
-                q.AddJob<NotificationHouseKeepingJob>(opts => opts.WithIdentity(jobKey));
-
-                q.AddTrigger(opts => opts
-                    .ForJob(jobKey)
-                    .WithIdentity("NotificationHouseKeepingTrigger")
-                    // Schedule every first day of the month at 00:00
-                    .WithCronSchedule("0 0 0 1 * ?")
-                    )
-                    ;
-            });
-
-            // ASP.NET Core hosting
-            services.AddQuartzHostedService(options =>
-            {
-                // when shutting down we want jobs to complete gracefully
-                options.WaitForJobsToComplete = true;
-            });
-
             services.AddSingleton<EmailService>();
         }
 
@@ -206,8 +182,6 @@ namespace InventoryService
             app.UseCors("AllowOrigin");
 
             app.UseRouting();
-
-            app.UseMiddleware<AuthorizationMiddleware>();
 
             app.UseResponseCaching();
 

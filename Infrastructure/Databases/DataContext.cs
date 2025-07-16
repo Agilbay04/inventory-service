@@ -6,12 +6,6 @@ namespace InventoryService.Infrastructure.Databases
 {
     public partial class DataContext(DbContextOptions<DataContext> options) : DbContext(options)
     {
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<Permission> Permissions { get; set; }
-        public DbSet<UserRole> UserRoles { get; set; }
-        public DbSet<RolePermission> RolePermissions { get; set; }
-        public DbSet<Notification> Notifications { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
 
@@ -24,34 +18,10 @@ namespace InventoryService.Infrastructure.Databases
                 .ToList()
                 .ForEach(p => p.SetMaxLength(255));
 
-            GenerateUuid<Role>(modelBuilder, "Id");
-            SoftDelete<Role>(modelBuilder);
-            GenerateUuid<User>(modelBuilder, "Id");
-            SoftDelete<User>(modelBuilder);
-            GenerateUuid<Permission>(modelBuilder, "Id");
-            SoftDelete<Permission>(modelBuilder);
-            GenerateUuid<UserRole>(modelBuilder, "Id");
-            SoftDelete<UserRole>(modelBuilder);
-            GenerateUuid<RolePermission>(modelBuilder, "Id");
-            SoftDelete<RolePermission>(modelBuilder);
             GenerateUuid<Product>(modelBuilder, "Id");
             SoftDelete<Product>(modelBuilder);
-
-            modelBuilder.Entity<User>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
-
-            modelBuilder.Entity<Role>()
-                .HasIndex(r => r.Key)
-                .IsUnique();
-
-            modelBuilder.Entity<Permission>()
-                .HasIndex(p => p.Key)
-                .IsUnique();
-
-            modelBuilder.Entity<Notification>()
-                .Property(n => n.IsRead)
-                .HasDefaultValue(false);
+            GenerateUuid<Category>(modelBuilder, "Id");
+            SoftDelete<Category>(modelBuilder);
 
             modelBuilder.Entity<Product>()
                 .HasIndex(p => p.Code)
