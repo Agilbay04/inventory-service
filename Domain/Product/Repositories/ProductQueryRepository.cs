@@ -118,7 +118,7 @@ namespace InventoryService.Domain.Product.Repositories
         {
             return await query.Select(x => x.Id).CountAsync();
         }
-        
+
         public int Count(IQueryable<Models.Product> query)
         {
             return query.Select(x => x.Id).Count();
@@ -145,6 +145,32 @@ namespace InventoryService.Domain.Product.Repositories
                     && data.IsPublish == true
                     && data.DeletedAt == null
                     && data.Category.DeletedAt == null)];
+        }
+
+        public async Task<bool> UpdateStockAsync(List<UpdateStockProductDto> data)
+        {
+            return await _dbContext.Database.CreateExecutionStrategy().ExecuteAsync(async () =>
+            {
+                using var transaction = await _dbContext.Database.BeginTransactionAsync();
+                try
+                {
+                    var productIds = data.Select(x => x.ProductId).ToList();
+                    var products = await _dbContext.Products.Where(x => productIds.Contains(x.Id)).ToListAsync();
+
+                    foreach (var product in products)
+                    {
+                        product.Stock -= data.FirstOrDefault(x => x.ProductId == product.Id).Qty;
+                    }
+                    await _dbContext.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    await transaction.RollbackAsync();
+                    return false;
+                }
+            });
         }
     }
 }

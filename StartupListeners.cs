@@ -11,6 +11,7 @@ namespace InventoryService
             services.AddScoped<LoggingNATsListenAndReply>();
             services.AddScoped<GetProductByIdsNATsListenAndReply>();
             services.AddScoped<GetAllProductNATsListener>();
+            services.AddScoped<UpdateStockProductNATsListener>();
         }
     }
 }

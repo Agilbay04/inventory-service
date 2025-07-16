@@ -41,5 +41,11 @@ namespace InventoryService.Domain.Product.Services
             var data = _productQueryRepository.FindByIds(ids);
             return ProductResultDto.MapRepo(data);
         }
+
+        public async Task<bool> UpdateStockAsync(List<UpdateStockProductDto> data)
+        {
+            var result = await _productQueryRepository.UpdateStockAsync(data);
+            return result;
+        }
     }
 }

@@ -56,6 +56,15 @@ namespace InventoryService.Infrastructure.BackgroundHosted
                     NATsEventStatusEnum.REQUEST
                 )
             );
+
+            _natsIntegration.InitListenAndReplyTask<UpdateStockProductNATsListener>(serviceScopeFactory,
+                _natsIntegration.Subject(
+                    NATsEventModuleEnum.PRODUCT,
+                    NATsEventActionEnum.UPDATE,
+                    NATsEventStatusEnum.REQUEST
+                )
+            );
+
         }
     }
 }
