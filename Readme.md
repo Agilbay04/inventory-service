@@ -1,3 +1,6 @@
+# INVENTORY SERVICE
+Service to handle product management and stock availability monitoring
+
 # Table of Content
 
 - [Pre Requisite](#pre-requisite)
@@ -43,7 +46,7 @@
 
 # Database ERD
 
-- ERD https://dbdocs.io/devops.dot/dotnet-service-boilerplate
+- ERD https://dbdocs.io/Bayu%20Agil/inventory-service
 
 # Important Note
 
